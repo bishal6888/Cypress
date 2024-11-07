@@ -1,0 +1,24 @@
+name: Cypress Test
+on: [push]
+jobs:
+  cypress-run:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+            containers: [1,2]
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Run Cypress Tests in Chrome
+        run: cypress-io/github-action@v6
+        with:
+            browser: chrome
+            record: true
+            parallel: true
+        env:
+          CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
+          USER_NAME: ${{ secrets.USER_NAME }}
+          USER_PASSWORD: ${{ secrets.USER_PASSWORD }}
+          URL: ${{ secrets.URL }}
+

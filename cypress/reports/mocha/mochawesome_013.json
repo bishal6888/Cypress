@@ -1,0 +1,105 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2024-10-23T03:28:21.077Z",
+    "end": "2024-10-23T03:28:24.148Z",
+    "duration": 3071,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "254c23a7-719c-435e-9117-0c75c51013c4",
+      "title": "",
+      "fullFile": "cypress/e2e/1-getting-started/showResponse.cy.js",
+      "file": "cypress/e2e/1-getting-started/showResponse.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "389e673b-538d-4344-8729-4c25a05eccfb",
+          "title": "verify input fields",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "work response",
+              "fullTitle": "verify input fields work response",
+              "timedOut": null,
+              "duration": 1704,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.intercept('GET', 'https://practice.expandtesting.com/slow-external', {\n  statusCode: 200,\n  body: 'This slow task has not finished. Thanks for waiting!'\n}).as('mockApi');\ncy.visit('https://practice.expandtesting.com/slow');\ncy.wait('@mockApi').then(() => {\n  cy.get('.alert-info').should('have.text', 'This slow task has not finished. Thanks for waiting!');\n});",
+              "err": {},
+              "uuid": "8adee0ad-f61f-4423-9879-bbe76df80004",
+              "parentUUID": "389e673b-538d-4344-8729-4c25a05eccfb",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "8adee0ad-f61f-4423-9879-bbe76df80004"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 1704,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports/mocha",
+        "overwrite": false,
+        "html": true,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

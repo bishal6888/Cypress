@@ -1,0 +1,105 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2024-10-23T03:30:51.206Z",
+    "end": "2024-10-23T03:30:55.226Z",
+    "duration": 4020,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "cc88244b-91af-4adb-bc96-2c1b6ebe5906",
+      "title": "",
+      "fullFile": "cypress/e2e/1-getting-started/dropdown.cy.js",
+      "file": "cypress/e2e/1-getting-started/dropdown.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "3e6b62ad-456c-49c4-ac19-5578cb094455",
+          "title": "example radio app",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "check radio button",
+              "fullTitle": "example radio app check radio button",
+              "timedOut": null,
+              "duration": 2348,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('https://practice.expandtesting.com/dropdown');\ncy.get('#dropdown').select('Option 2');\ncy.get('.form-control').select('50');\ncy.get('#country').select('Nepal');",
+              "err": {},
+              "uuid": "02a38f34-7daf-4461-8bd6-352ceca5ecc4",
+              "parentUUID": "3e6b62ad-456c-49c4-ac19-5578cb094455",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "02a38f34-7daf-4461-8bd6-352ceca5ecc4"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 2348,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports/mocha",
+        "overwrite": false,
+        "html": true,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

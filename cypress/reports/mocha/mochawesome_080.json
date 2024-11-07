@@ -1,0 +1,143 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 3,
+    "passes": 3,
+    "pending": 0,
+    "failures": 0,
+    "start": "2024-10-25T03:02:05.462Z",
+    "end": "2024-10-25T03:02:27.185Z",
+    "duration": 21723,
+    "testsRegistered": 3,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "1ad995cf-ac39-42e9-8d1a-6f904b9ef2ea",
+      "title": "",
+      "fullFile": "cypress/e2e/1-getting-started/newLogin.cy.js",
+      "file": "cypress/e2e/1-getting-started/newLogin.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "88a51ae4-476c-495b-977d-05484ccd1b28",
+          "title": "login using command",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Create a new note",
+              "fullTitle": "login using command Create a new note",
+              "timedOut": null,
+              "duration": 4997,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "notespage.ClickOnAddNotesButton();\nnotespage.AddTitleformates('note1');\nnotespage.AddDescriptionfornotes('New Description');\nnotespage.ClickOnCreateNotesButton();",
+              "err": {},
+              "uuid": "273da61d-939e-49fb-9a1c-f28de55c7ccc",
+              "parentUUID": "88a51ae4-476c-495b-977d-05484ccd1b28",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "edit a new note",
+              "fullTitle": "login using command edit a new note",
+              "timedOut": null,
+              "duration": 7345,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.wait(5000);\nnotespage.ClickOnEditButton();\nnotespage.AddTitleformates('noteseditor');\nnotespage.AddDescriptionfornotes(\"Updated Description\");\nnotespage.ClickOnSaveButton();",
+              "err": {},
+              "uuid": "b8eebf93-ce25-40ca-b721-70a824eec052",
+              "parentUUID": "88a51ae4-476c-495b-977d-05484ccd1b28",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "delete a note",
+              "fullTitle": "login using command delete a note",
+              "timedOut": null,
+              "duration": 7049,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.wait(5000);\nnotespage.ClickOnDeleteNoteButton();\nnotespage.ClickOnConfirmDeleteButton();",
+              "err": {},
+              "uuid": "509f0e43-4236-49da-b6de-520e95635036",
+              "parentUUID": "88a51ae4-476c-495b-977d-05484ccd1b28",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "273da61d-939e-49fb-9a1c-f28de55c7ccc",
+            "b8eebf93-ce25-40ca-b721-70a824eec052",
+            "509f0e43-4236-49da-b6de-520e95635036"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 19391,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports/mocha",
+        "overwrite": false,
+        "html": true,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

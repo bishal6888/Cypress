@@ -1,0 +1,124 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 2,
+    "pending": 0,
+    "failures": 0,
+    "start": "2024-10-23T03:26:16.489Z",
+    "end": "2024-10-23T03:26:23.315Z",
+    "duration": 6826,
+    "testsRegistered": 2,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "65fbf7d3-cc30-4574-910d-df8c6e75d0c5",
+      "title": "",
+      "fullFile": "cypress/e2e/1-getting-started/bmiClass.cy.js",
+      "file": "cypress/e2e/1-getting-started/bmiClass.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "91113651-6449-4e7e-b535-88ec51c53128",
+          "title": "BMI Calculator",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should calculate BMI",
+              "fullTitle": "BMI Calculator should calculate BMI",
+              "timedOut": null,
+              "duration": 2972,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "bmi.selectGender(bmiData.gender);\nbmi.enterAge(bmiData.age);\nbmi.enterWeight(bmiData.weight);\nbmi.enterHeight(bmiData.height);\nbmi.calculateBMI();\nbmi.assertBMIReport(bmiData);",
+              "err": {},
+              "uuid": "f9f374bb-8c85-4483-ad47-e1061954d30a",
+              "parentUUID": "91113651-6449-4e7e-b535-88ec51c53128",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "should calculate correct BMI",
+              "fullTitle": "BMI Calculator should calculate correct BMI",
+              "timedOut": null,
+              "duration": 2310,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const genderData = [\"Male\", \"Female\"];\nconst randomBMiData = {\n  //age between 15 and 70\n  age: Math.floor(Math.random() * 55) + 15,\n  //weight between 40 and 150\n  weight: Math.floor(Math.random() * 110) + 40,\n  //height between 140 and 200\n  height: Math.floor(Math.random() * 60) + 140,\n  // gender male or female\n  gender: genderData[Math.floor(Math.random() * 2)]\n};\nbmi.selectGender(randomBMiData.gender);\nbmi.enterAge(randomBMiData.age);\nbmi.enterWeight(randomBMiData.weight);\nbmi.enterHeight(randomBMiData.height);\nbmi.calculateBMI();\nbmi.assertBMIReport(randomBMiData);\nbmi.checkBmiValue(randomBMiData);",
+              "err": {},
+              "uuid": "baaab9af-a292-4a93-8e0d-318ef768ca47",
+              "parentUUID": "91113651-6449-4e7e-b535-88ec51c53128",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "f9f374bb-8c85-4483-ad47-e1061954d30a",
+            "baaab9af-a292-4a93-8e0d-318ef768ca47"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 5282,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports/mocha",
+        "overwrite": false,
+        "html": true,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

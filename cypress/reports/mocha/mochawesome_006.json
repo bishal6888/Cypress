@@ -1,0 +1,105 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2024-10-23T03:26:42.020Z",
+    "end": "2024-10-23T03:26:51.269Z",
+    "duration": 9249,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "20eed590-d74f-4f01-a965-0252790b9b78",
+      "title": "",
+      "fullFile": "cypress/e2e/1-getting-started/dynamic.cy.js",
+      "file": "cypress/e2e/1-getting-started/dynamic.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "001d381b-9a24-481b-969e-03054de251a1",
+          "title": "test related tables",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "verify CPU usage",
+              "fullTitle": "test related tables verify CPU usage",
+              "timedOut": null,
+              "duration": 4693,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.wait(3000);\nlet colIndex;\ncy.visit('https://practice.expandtesting.com/dynamic-table');\ncy.get('.table-striped thead th').contains('CPU').invoke('index').then(index => {\n  colIndex = index;\n  cy.log(colIndex);\n  cy.get('.table-striped tbody tr').contains('Chrome').parent('tr').find('>td').eq(colIndex).then($cell => {\n    const cpuVlaue = $cell.text().trim();\n    cy.get('#chrome-cpu').invoke(\"text\").then(text => {\n      const value = text.trim().split(':')[1].trim();\n      expect(value).to.equal(cpuVlaue);\n    });\n  });\n});",
+              "err": {},
+              "uuid": "28918569-95b5-4cd2-8652-afb8c21b1d87",
+              "parentUUID": "001d381b-9a24-481b-969e-03054de251a1",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "28918569-95b5-4cd2-8652-afb8c21b1d87"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 4693,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports/mocha",
+        "overwrite": false,
+        "html": true,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

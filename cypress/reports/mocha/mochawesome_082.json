@@ -1,0 +1,105 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2024-10-25T03:02:48.587Z",
+    "end": "2024-10-25T03:03:00.118Z",
+    "duration": 11531,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "62612176-33b1-4a5e-87df-801faac68153",
+      "title": "",
+      "fullFile": "cypress/e2e/1-getting-started/apiLogin.cy.js",
+      "file": "cypress/e2e/1-getting-started/apiLogin.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "608176fd-7b2d-42e8-a66c-40a832674b25",
+          "title": "api login",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Create a new note",
+              "fullTitle": "api login Create a new note",
+              "timedOut": null,
+              "duration": 9580,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const addnotesbody = {\n  title: 'note1',\n  description: 'New Description',\n  category: \"Home\",\n  completed: false\n};\nconst token = window.localStorage.getItem('token');\ncy.request({\n  method: 'POST',\n  url: 'https://practice.expandtesting.com/notes/api/notes',\n  body: addnotesbody,\n  headers: {\n    'Content-Type': 'application/json',\n    'x-auth-token': token\n  }\n}).then(response => {\n  expect(response.status).to.eq(200);\n  const noteId = response.body.data.id;\n  cy.wait(5000);\n  notespage.ClickOnEditButton();\n  notespage.AddTitleformates('noteseditor');\n  notespage.AddDescriptionfornotes('Updated Description');\n  notespage.ClickOnSaveButton();\n  cy.request({\n    method: 'DELETE',\n    url: 'https://practice.expandtesting.com/notes/api/notes/' + noteId,\n    headers: {\n      'Content-Type': 'application/json',\n      'x-auth-token': token\n    }\n  }).then(response => {\n    expect(response.status).to.eq(200);\n  });\n});",
+              "err": {},
+              "uuid": "e91eca66-54c3-4777-956c-3ddcbd714dc2",
+              "parentUUID": "608176fd-7b2d-42e8-a66c-40a832674b25",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "e91eca66-54c3-4777-956c-3ddcbd714dc2"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 9580,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports/mocha",
+        "overwrite": false,
+        "html": true,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

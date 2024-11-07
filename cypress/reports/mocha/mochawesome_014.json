@@ -1,0 +1,181 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 5,
+    "passes": 5,
+    "pending": 0,
+    "failures": 0,
+    "start": "2024-10-23T03:28:25.238Z",
+    "end": "2024-10-23T03:28:34.803Z",
+    "duration": 9565,
+    "testsRegistered": 5,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "9a852114-aacc-42bd-b6b8-78978daa60bc",
+      "title": "",
+      "fullFile": "cypress/e2e/1-getting-started/sorting.cy.js",
+      "file": "cypress/e2e/1-getting-started/sorting.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "c0f3bde6-44cb-466a-8841-9996dc607bda",
+          "title": "Sort Products",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should check if login works",
+              "fullTitle": "Sort Products should check if login works",
+              "timedOut": null,
+              "duration": 2975,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.url().should(\"include\", \"inventory.html\");",
+              "err": {},
+              "uuid": "618aff38-4610-41b1-90ab-e80ff3d4b55c",
+              "parentUUID": "c0f3bde6-44cb-466a-8841-9996dc607bda",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "should sort products by name in accending order",
+              "fullTitle": "Sort Products should sort products by name in accending order",
+              "timedOut": null,
+              "duration": 1143,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "swagLab.sortProducts();",
+              "err": {},
+              "uuid": "e237ecb4-5f99-4a87-9acd-7e7147bf7aa5",
+              "parentUUID": "c0f3bde6-44cb-466a-8841-9996dc607bda",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "should sort products by name in decending order",
+              "fullTitle": "Sort Products should sort products by name in decending order",
+              "timedOut": null,
+              "duration": 1160,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "swagLab.sortProducts(\"name_desc\");",
+              "err": {},
+              "uuid": "f7c3a32a-9b48-469e-9d34-27ee6f42406d",
+              "parentUUID": "c0f3bde6-44cb-466a-8841-9996dc607bda",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "should sort products by price in accending order",
+              "fullTitle": "Sort Products should sort products by price in accending order",
+              "timedOut": null,
+              "duration": 1116,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "swagLab.sortProducts(\"price_asc\");",
+              "err": {},
+              "uuid": "de786651-d2fb-4095-af60-0827f575b626",
+              "parentUUID": "c0f3bde6-44cb-466a-8841-9996dc607bda",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "should sort products by price in decending order",
+              "fullTitle": "Sort Products should sort products by price in decending order",
+              "timedOut": null,
+              "duration": 1133,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "swagLab.sortProducts(\"price_desc\");",
+              "err": {},
+              "uuid": "f369bb8c-e8f1-4ce8-8bdf-629cc0abfd73",
+              "parentUUID": "c0f3bde6-44cb-466a-8841-9996dc607bda",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "618aff38-4610-41b1-90ab-e80ff3d4b55c",
+            "e237ecb4-5f99-4a87-9acd-7e7147bf7aa5",
+            "f7c3a32a-9b48-469e-9d34-27ee6f42406d",
+            "de786651-d2fb-4095-af60-0827f575b626",
+            "f369bb8c-e8f1-4ce8-8bdf-629cc0abfd73"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 7527,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports/mocha",
+        "overwrite": false,
+        "html": true,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

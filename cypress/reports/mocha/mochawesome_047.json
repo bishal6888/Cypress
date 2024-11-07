@@ -1,0 +1,109 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2024-10-23T03:33:01.799Z",
+    "end": "2024-10-23T03:33:07.524Z",
+    "duration": 5725,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "67f98f64-026d-4a01-ab3f-08ce2b2b0201",
+      "title": "",
+      "fullFile": "cypress/e2e/1-getting-started/todo.cy.js",
+      "file": "cypress/e2e/1-getting-started/todo.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "3d73369f-a6a9-4f8d-b1ef-c702b93ba2bb",
+          "title": "example to-do app",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "can check off an item as completed",
+              "fullTitle": "example to-do app can check off an item as completed",
+              "timedOut": null,
+              "duration": 4449,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "// In addition to using the `get` command to get an element by selector,\n// we can also use the `contains` command to get an element by its contents.\n// However, this will yield the <label>, which is lowest-level element that contains the text.\n// In order to check the item, we'll find the <input> element for this <label>\n// by traversing up the dom to the parent element. From there, we can `find`\n// the child checkbox <input> element and use the `check` command to check it.\ncy.contains('Pay electric bill').parent().find('input[type=button]').check();\n// Now that we've checked the button, we can go ahead and make sure\n// that the list element is now marked as completed.\n// Again we'll use `contains` to find the <label> element and then use the `parents` command\n// to traverse multiple levels up the dom until we find the corresponding <li> element.\n// Once we get that element, we can assert that it has the completed class.\ncy.contains('Pay electric bill').parents('li').should('have.class', 'completed');",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `input[type=button]`, but never found it. Queried from:\n\n              > cy.contains(Pay electric bill).parent()",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `input[type=button]`, but never found it. Queried from:\n\n              > cy.contains(Pay electric bill).parent()\n    at Context.eval (webpack://cypress/./cypress/e2e/1-getting-started/todo.cy.js:69:7)",
+                "diff": null
+              },
+              "uuid": "b5783bd1-d30a-4e8e-b35f-7bdf27ae5151",
+              "parentUUID": "3d73369f-a6a9-4f8d-b1ef-c702b93ba2bb",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "b5783bd1-d30a-4e8e-b35f-7bdf27ae5151"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 4449,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports/mocha",
+        "overwrite": false,
+        "html": true,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

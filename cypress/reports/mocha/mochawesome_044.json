@@ -1,0 +1,105 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2024-10-23T03:32:37.000Z",
+    "end": "2024-10-23T03:32:43.991Z",
+    "duration": 6991,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "611641d2-d4dd-4670-be37-eb65835c4db2",
+      "title": "",
+      "fullFile": "cypress/e2e/1-getting-started/reactApp.cy.js",
+      "file": "cypress/e2e/1-getting-started/reactApp.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "ff3859fe-4c74-485d-b83a-bc792e730cfa",
+          "title": "react app",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "click add notes",
+              "fullTitle": "react app click add notes",
+              "timedOut": null,
+              "duration": 5458,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('https://practice.expandtesting.com/notes/app');\ncy.get('[data-testid=\"add-new-note\"]').click();\ncy.get('.modal-title').should('have.text', 'Add new note');\ncy.get('#category').select('Home');\ncy.get('.form-check-label').click();\ncy.get('#title').type('Test');",
+              "err": {},
+              "uuid": "50409a78-1feb-461e-b913-12c1810dec85",
+              "parentUUID": "ff3859fe-4c74-485d-b83a-bc792e730cfa",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "50409a78-1feb-461e-b913-12c1810dec85"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 5458,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports/mocha",
+        "overwrite": false,
+        "html": true,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}
