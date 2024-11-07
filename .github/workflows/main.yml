@@ -20,6 +20,6 @@ jobs:
           parallel: true
           env: grepTags=@smoke
         env:
-          CYPRESS_RECORD_KEY: '2cbc1c99-1a42-4065-900d-f116c656d183'
+          CYPRESS_RECORD_KEY: '28ea28a6-7188-4a74-b4d7-d11b834e08b7'
           USER_NAME: ${{ secrets.USER_NAME }}
           USER_PASSWORD: ${{ secrets.USER_PASSWORD }}
