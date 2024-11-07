@@ -7,13 +7,13 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        node-version: [1.2]
+        container: [1.2]
     steps:
       - name: Checkout Code
         uses: actions/checkout@v2
 
       - name: Run Cypress Test Suite
-        uses: cypress-io/.github-action@v6
+        uses: cypress-io/github-action@v6
         with:
           browser: chrome
           record: true
